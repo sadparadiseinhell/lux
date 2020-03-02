@@ -12,8 +12,8 @@
     --second: var(--color2);
     --header: var(--color1); */
     --foreground: #1a1a1a;
-    --second: #3366ff;
-    --header: #ff4d4d;
+    --second: #999999;
+    --header: #ff3333;
 }
 
 [data-theme="dark"] {
@@ -22,8 +22,8 @@
     --open-sans: 'Open Sans', sans-serif;
     --background: #1a1a1a;
     --foreground: #f1f1f1;
-    --second: #3366ff;
-    --header: #ff4d4d);
+    --second: #999999;
+    --header: #ff6666;
 }
 
 html {
