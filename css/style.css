@@ -8,19 +8,22 @@
     --noto-sans: 'Noto Sans', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
     --background: #fff;
-    --foreground: var(--color0);
+/*    --foreground: var(--color0);
     --second: var(--color2);
-    --header: var(--color1);
+    --header: var(--color1); */
+    --foreground: #1a1a1a;
+    --second: #3366ff;
+    --header: #ff4d4d;
 }
 
 [data-theme="dark"] {
     --roboto: 'Roboto', sans-serif;;
     --noto-sans: 'Noto Sans', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
-    --background: var(--color0);
-    --foreground: var(--color7);
-    --second: var(--color2);
-    --header: var(--color1);
+    --background: #1a1a1a;
+    --foreground: #f1f1f1;
+    --second: #3366ff;
+    --header: #ff4d4d);
 }
 
 html {
