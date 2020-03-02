@@ -1,28 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Roboto:400&display=swap&subset=cyrillic');
-@import url('file:///home/USER/.cache/wal/colors.css');
+/* @import url('file:///home/USER/.cache/wal/colors.css'); uncomment if using pywal */
 
 
 :root {
     --roboto: 'Roboto', sans-serif;;
     --noto-sans: 'Noto Sans', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
-    --background: #fff;
-/*    --foreground: var(--color0);
+    --background: #f8f8f8;
+/*  --foreground: var(--color0);
     --second: var(--color2);
-    --header: var(--color1); */
+    --header: var(--color1); uncomment if using pywal or replace the lines below with these lines */
     --foreground: #1a1a1a;
     --second: #999999;
     --header: #ff3333;
+    --source: #bfbfbf;
 }
 
 [data-theme="dark"] {
     --roboto: 'Roboto', sans-serif;;
     --noto-sans: 'Noto Sans', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
+/*  --background: var(--color0);
+    --foreground: var(--color7);
+    --second: var(--color2);
+    --header: var(--color1); uncomment if using pywal or replace the lines below with these lines */
     --background: #1a1a1a;
     --foreground: #f1f1f1;
     --second: #999999;
     --header: #ff6666;
+    --source: #4d4d4d;
 }
 
 html {
@@ -55,6 +61,22 @@ body {
 
 .prompt~.prompt {
     padding: 1rem 0 0.35rem 0;
+}
+
+.source {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: .6rem;
+}
+
+.s {
+    font-family: var(--roboto);
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--source);
+    text-decoration: none;
+    outline: none;    
 }
 
 span {
