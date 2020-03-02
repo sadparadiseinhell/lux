@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Roboto:400&display=swap&subset=cyrillic');
-@import url('file:///home/ma/.cache/wal/colors.css');
+@import url('file:///home/USER/.cache/wal/colors.css');
 
 
 :root {
@@ -69,16 +69,6 @@ h1 {
     font-weight: normal;
     color: var(--header);
     padding-left: 0rem;
-}
-
-h1m {
-    display: inline;
-    font-family: var(--roboto);
-    font-size: 1rem;
-    font-weight: normal;
-    color: var(--header);
-    padding-left: 0rem;
-    margin-left: 0.9rem;
 }
 
 a {
