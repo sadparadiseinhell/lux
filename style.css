@@ -67,7 +67,7 @@ body {
     position: fixed;
     right: 0;
     bottom: 0;
-    padding: .6rem;
+    padding: 0 1rem .6rem 0;
 }
 
 .s {
