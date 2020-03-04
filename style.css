@@ -37,6 +37,7 @@ html {
 
 body {
     background: var(--background);
+    transition: .4s;
 }
 
 .container {
@@ -50,6 +51,7 @@ body {
     margin: 0;
     padding-left: 0rem;
     word-spacing: 0.8rem;
+    line-height: .1rem;
 }
 
 .prompt {
@@ -60,14 +62,15 @@ body {
 }
 
 .prompt~.prompt {
-    padding: 1rem 0 0.35rem 0;
+    padding: 1.2rem 0 0.2rem 0;
+    line-height: .1rem;
 }
 
 .source {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    padding: 0 1rem .6rem 0;
+    right: 1rem;
+    bottom: .7rem;
+
 }
 
 .s {
@@ -84,7 +87,8 @@ span {
 }
 
 h1 {
-    display: inline;
+    display: inline-block;
+    width: 50px;
     font-family: var(--roboto);
     font-size: 1rem;
     font-weight: normal;
@@ -98,6 +102,7 @@ a {
     color: var(--foreground);
     text-decoration: none;
     outline: none;
+    transition: .2s;
 }
 
 a:hover {
@@ -110,7 +115,7 @@ input {
     font-family: var(--roboto);
     font-size: 1rem;
     color: var(--foreground);
-    background-color: var(--background);
+    background-color: transparent;
     border: none;
     margin: 0rem 0rem 0rem 0.8rem;
 }
@@ -121,8 +126,8 @@ input:focus{
 
 .checkbox_position {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1rem;
+    right: 1rem;
 }
 
 .check_box {
@@ -134,8 +139,7 @@ input:focus{
     height: 22px;
     width: 22px;
     display:inline-block;
-    padding: 0px 0 0 0px;
-    margin: 10px;
+    transition: .2s;
 }
 
 .check_box:hover + label {
@@ -143,8 +147,6 @@ input:focus{
     height: 22px;
     width: 22px;
     display:inline-block;
-    padding: 0px 0 0 0px;
-    margin: 10px;
 }
 
 .check_box:checked + label {
@@ -152,7 +154,6 @@ input:focus{
     height: 22px;
     width: 22px;
     display: inline-block;
-    padding: 0 0 0 0px;
 }
 
 .check_box:checked:hover + label {
@@ -160,5 +161,4 @@ input:focus{
     height: 22px;
     width: 22px;
     display: inline-block;
-    padding: 0 0 0 0px;
 }
