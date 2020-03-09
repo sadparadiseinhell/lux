@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Roboto:400&display=swap&subset=cyrillic');
-/* @import url('file:///home/USER/.cache/wal/colors.css'); uncomment if using pywal */
+/* @import url('file:///home/ma/.cache/wal/colors.css'); /* uncomment if using pywal */
 
 
 :root {
@@ -7,9 +7,9 @@
     --noto-sans: 'Noto Sans', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
     --background: #f8f8f8;
-/*  --foreground: var(--color0);
+/*    --foreground: var(--color0);
     --second: var(--color2);
-    --header: var(--color1); uncomment if using pywal or replace the lines below with these lines */
+    --header: var(--color1); /* uncomment if using pywal or replace the lines below with these lines */
     --foreground: #1a1a1a;
     --second: #999999;
     --header: #ff3333;
@@ -20,10 +20,10 @@
     --roboto: 'Roboto', sans-serif;;
     --noto-sans: 'Noto Sans', sans-serif;;
     --open-sans: 'Open Sans', sans-serif;
-/*  --background: var(--color0);
+/*    --background: var(--color0);
     --foreground: var(--color7);
     --second: var(--color2);
-    --header: var(--color1); uncomment if using pywal or replace the lines below with these lines */
+    --header: var(--color1); /* uncomment if using pywal or replace the lines below with these lines */
     --background: #1a1a1a;
     --foreground: #f1f1f1;
     --second: #999999;
@@ -43,7 +43,7 @@ body {
 .container {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 53%;
     transform: translate(-50%, -50%);
 }
 
