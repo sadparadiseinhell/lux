@@ -140,6 +140,7 @@ input:focus{
     width: 22px;
     display:inline-block;
     transition: .2s;
+    cursor: pointer;
 }
 
 .check_box:hover + label {
