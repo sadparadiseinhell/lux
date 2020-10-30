@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Roboto:400&display=swap&subset=cyrillic');
 /* @import url('file:///home/ma/.cache/wal/colors.css'); /* uncomment if using pywal */
 
-
 :root {
     --roboto: 'Roboto', sans-serif;;
     --noto-sans: 'Noto Sans', sans-serif;;
@@ -10,9 +9,9 @@
 /*    --foreground: var(--color0);
     --second: var(--color2);
     --header: var(--color1); /* uncomment if using pywal or replace the lines below with these lines */
-    --foreground: #1a1a1a;
+    --foreground: #333333;
     --second: #999999;
-    --header: #ff3333;
+    --header: #3a7e99;
     --source: #bfbfbf;
 }
 
@@ -25,14 +24,10 @@
     --second: var(--color2);
     --header: var(--color1); /* uncomment if using pywal or replace the lines below with these lines */
     --background: #1a1a1a;
-    --foreground: #f1f1f1;
+    --foreground: #bfbfbf;
     --second: #999999;
-    --header: #ff6666;
+    --header: #93C4D1;
     --source: #4d4d4d;
-}
-
-html {
-    font-size: 18px;
 }
 
 body {
@@ -40,65 +35,69 @@ body {
     transition: .4s;
 }
 
+.parent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+	flex-direction: column;
+}
+
 .container {
-    position: absolute;
-    top: 50%;
-    left: 53%;
-    transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	line-height: 35px;
+    max-width: 450px;
 }
 
 .content {
-    margin: 0 0 -.15rem 0rem;
-    padding-left: 0rem;
-    word-spacing: 0.8rem;
-    line-height: .1rem;
-
+    word-spacing: 10px;
 }
 
-.prompt {
-    font-size: 0.9rem;
-    font-family: var(--roboto);
-    color: var(--foreground);
-    padding: 0 0 0.35rem 0;
-}
-
-.prompt~.prompt {
-    padding: 1.2rem 0 0.2rem 0;
-    line-height: .1rem;
+.search {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
 }
 
 .source {
     position: fixed;
-    right: 1rem;
-    bottom: .7rem;
+    right: 20px;
+    bottom: 15px;
 }
 
 .s {
     font-family: var(--roboto);
-    font-size: 0.7rem;
+    font-size: 12px;
     font-weight: bold;
     color: var(--source);
     text-decoration: none;
     outline: none;    
 }
 
-span {
-    color: var(--second);
-}
-
-h1 {
-    display: inline-block;
+n {
+	display: inline-block;
+    font-weight: normal;
     width: 50px;
     font-family: var(--roboto);
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 18px;
     color: var(--header);
-    padding-left: 0rem;
+    text-decoration: none;
+    outline: none;
+    transition: .2s;
+	margin-right: 10px;
 }
 
 a {
     font-family: var(--roboto);
-    font-size: 1rem;
+    font-size: 18px;
     color: var(--foreground);
     text-decoration: none;
     outline: none;
@@ -108,16 +107,15 @@ a {
 a:hover {
     font-family: var(--roboto);
     color: var(--header);
-
 }
 
 input {
     font-family: var(--roboto);
-    font-size: 1rem;
+    font-size: 18px;
     color: var(--foreground);
     background-color: transparent;
     border: none;
-    margin: 0rem 0rem 0rem 0.8rem;
+	text-align: center;
 }
 
 input:focus{
@@ -126,8 +124,8 @@ input:focus{
 
 .checkbox_position {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 20px;
+    right: 20px;
 }
 
 .check_box {
@@ -144,7 +142,7 @@ input:focus{
 }
 
 .check_box:hover + label {
-    background: url('https://api.iconify.design/ion:moon.svg?color=%234d4d4d') no-repeat center center / contain;
+    background: url('https://api.iconify.design/ion:moon.svg?color=%23f0dd18') no-repeat center center / contain;
     height: 22px;
     width: 22px;
     display:inline-block;
@@ -158,7 +156,7 @@ input:focus{
 }
 
 .check_box:checked:hover + label {
-    background: url('https://api.iconify.design/ion:sunny.svg?color=%23f8f8f8') no-repeat center center / contain;
+    background: url('https://api.iconify.design/ion:sunny.svg?color=%23ffc914') no-repeat center center / contain;
     height: 22px;
     width: 22px;
     display: inline-block;
