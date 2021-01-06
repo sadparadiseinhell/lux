@@ -1,4 +1,4 @@
 ## Lux
-### Custom startpage with a dark and light theme for your favorite and most visited websites
+### Simple startpage with a dark/light theme
 
 ![Preview](https://i.imgur.com/askpJmz.png)
