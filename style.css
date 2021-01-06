@@ -1,163 +1,114 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Roboto:400&display=swap&subset=cyrillic');
-/* @import url('file:///home/ma/.cache/wal/colors.css'); /* uncomment if using pywal */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
 
 :root {
-    --roboto: 'Roboto', sans-serif;;
-    --noto-sans: 'Noto Sans', sans-serif;;
+    --roboto: 'Roboto', sans-serif;
+    --noto-sans: 'Noto Sans', sans-serif;
     --open-sans: 'Open Sans', sans-serif;
+    
     --background: #f8f8f8;
-/*    --foreground: var(--color0);
-    --second: var(--color2);
-    --header: var(--color1); /* uncomment if using pywal or replace the lines below with these lines */
     --foreground: #333333;
-    --second: #999999;
-    --header: #3a7e99;
-    --source: #bfbfbf;
+    --accent: #6c5dd3;
 }
 
-[data-theme="dark"] {
-    --roboto: 'Roboto', sans-serif;;
-    --noto-sans: 'Noto Sans', sans-serif;;
-    --open-sans: 'Open Sans', sans-serif;
-/*    --background: var(--color0);
-    --foreground: var(--color7);
-    --second: var(--color2);
-    --header: var(--color1); /* uncomment if using pywal or replace the lines below with these lines */
+[theme="dark"] {
     --background: #1a1a1a;
     --foreground: #bfbfbf;
-    --second: #999999;
-    --header: #93C4D1;
-    --source: #4d4d4d;
+    --accent: #7f70e4;
+}
+
+* {
+    font-family: var(--roboto);
+    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
-    background: var(--background);
-    transition: .4s;
-}
-
-.parent {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
-    align-items: center;
-    align-content: center; 
-    justify-content: center; 
-    overflow: auto;
-	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+    background: var(--background);
+	overflow: hidden;
+	font-size: 18px;
+	transition: .4s;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
-	align-items: stretch;
-	line-height: 35px;
-    max-width: 450px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.content {
-    word-spacing: 10px;
+.group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
 }
 
-.search {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
+.group p {
+    width: 60px;
+    margin-right: 10px;
+    color: var(--accent);
 }
 
-.source {
-    position: fixed;
-    right: 20px;
-    bottom: 15px;
-}
-
-.s {
-    font-family: var(--roboto);
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--source);
-    text-decoration: none;
-    outline: none;    
-}
-
-n {
-	display: inline-block;
-    font-weight: normal;
-    width: 50px;
-    font-family: var(--roboto);
-    font-size: 18px;
-    color: var(--header);
-    text-decoration: none;
-    outline: none;
-    transition: .2s;
-	margin-right: 10px;
-}
-
-a {
-    font-family: var(--roboto);
-    font-size: 18px;
+.group a {
     color: var(--foreground);
+    margin: 7px 15px 7px 0px;
     text-decoration: none;
     outline: none;
-    transition: .2s;
+    transition: .5s;
 }
 
 a:hover {
-    font-family: var(--roboto);
-    color: var(--header);
+    color: var(--accent);
+}
+
+.search {
+	margin-top: 5px;
 }
 
 input {
-    font-family: var(--roboto);
     font-size: 18px;
     color: var(--foreground);
-    background-color: transparent;
+    background: transparent;
     border: none;
 	text-align: center;
 }
 
-input:focus{
+input:focus {
     outline: none;
+    color: var(--accent);
 }
 
-.checkbox_position {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.btn_theme {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    transform: rotate(-25deg);
 }
 
-.check_box {
-    display: none;
+#chb_theme {display: none;}
+
+#chb_theme + label::before,
+#chb_theme + label:hover::before,
+#chb_theme:checked + label::before,
+#chb_theme:checked + label:hover::before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 20px;
+	content: "\f186";
+	cursor: pointer;
+	transition: .2s;
 }
 
-.check_box + label {
-    background: url('https://api.iconify.design/ion:moon.svg?color=%23bfbfbf') no-repeat center center / contain;
-    height: 22px;
-    width: 22px;
-    display:inline-block;
-    transition: .2s;
-    cursor: pointer;
-}
+#chb_theme + label::before {color: #BDBDBD;}
 
-.check_box:hover + label {
-    background: url('https://api.iconify.design/ion:moon.svg?color=%23f0dd18') no-repeat center center / contain;
-    height: 22px;
-    width: 22px;
-    display:inline-block;
-}
+#chb_theme + label:hover::before {color: #9E9E9E;}
 
-.check_box:checked + label {
-    background: url('https://api.iconify.design/ion:sunny.svg?color=%23bfbfbf') no-repeat center center / contain;
-    height: 22px;
-    width: 22px;
-    display: inline-block;
-}
+#chb_theme:checked + label::before {color: #FFD740;}
 
-.check_box:checked:hover + label {
-    background: url('https://api.iconify.design/ion:sunny.svg?color=%23ffc914') no-repeat center center / contain;
-    height: 22px;
-    width: 22px;
-    display: inline-block;
-}
+#chb_theme:checked + label:hover::before {color: #bfa132;}
